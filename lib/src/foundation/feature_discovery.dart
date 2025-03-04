@@ -37,8 +37,7 @@ class FeatureDiscovery extends StatelessWidget {
   /// onto the next step after the completion animation of the current overlay.
   ///
   /// The `onComplete` parameter will be ignored for every active overlay.
-  static Future<void> completeCurrentStep(BuildContext context) async =>
-      _blocOf(context).completeStep();
+  static Future<void> completeCurrentStep(BuildContext context) async => _blocOf(context).completeStep();
 
   /// This will return true iff
   /// this [featureId] has been recorded as completed
@@ -49,8 +48,7 @@ class FeatureDiscovery extends StatelessWidget {
   ) =>
       _blocOf(context).hasPreviouslyCompleted(featureId);
 
-  static Future<void> clearPreferences(
-          BuildContext context, Iterable<String> steps) =>
+  static Future<void> clearPreferences(BuildContext context, Iterable<String> steps) =>
       _blocOf(context).clearPreferences(steps);
 
   /// A method to dismiss all steps.
@@ -67,8 +65,7 @@ class FeatureDiscovery extends StatelessWidget {
   /// you passed to [discoverFeatures] even when there is no [DescribedFeatureOverlay]
   /// in the tree to display the overlay.
   /// This means that you cannot use this to check if a feature overlay is being displayed.
-  static String? currentFeatureIdOf(BuildContext context) =>
-      _blocOf(context).activeFeatureId;
+  static String? currentFeatureIdOf(BuildContext context) => _blocOf(context).activeFeatureId;
 
   final Widget child;
 
